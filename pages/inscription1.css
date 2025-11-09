@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(137, 137, 236);
+}
+p {
+    font-family: monospace;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(204, 204, 204);
+}
+.nav0 {
+    text-align: center;
+    color: rgb(204, 204, 204);
+    font-size: 50px;
+}
+hr {
+    background-color: rgb(204, 204, 204);
+}
+.nav1 {
+    font-family: monospace;
+    font-size: 15px;
+    color: rgb(204, 204, 204);
+}
+.intro {
+    font-family: monospace;
+    font-size: 13px;
+    text-align: center;
+    color: rgb(204, 204, 204);
+}
+fieldset {
+    width: 300px;
+    height: 450px;
+    margin: 0 auto;
+}
+.nav3 {
+    text-align: center;
+}

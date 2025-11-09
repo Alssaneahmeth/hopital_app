@@ -1,0 +1,37 @@
+img{
+height: 100px;
+width: 100px;;
+}
+.nav{
+background-color: blue;
+border: 50px;
+font-size: 100px;
+text-align: center;
+}
+a{
+color: rgb(204, 204, 204);
+font-size:27px;
+}
+h3{
+    font-size: 20px;
+    text-align: left;
+    color:  rgb(255, 253, 253);
+}
+p{
+color:  rgb(255, 253, 253);
+font-size:27px;
+}
+body{
+background : rgb(137, 137, 236);
+}
+.nav3{
+text-align: center;
+background-color: rgb(33, 33, 218);
+font-size: 50px;
+color:  rgb(255, 253, 253);;
+}
+table{
+  font-size: 55px;
+    text-align: center;
+    color:  rgb(255, 253, 253);
+}

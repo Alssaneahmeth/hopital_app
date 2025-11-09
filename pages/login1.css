@@ -1,0 +1,83 @@
+body{
+  background-color: rgb(137, 137, 236);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Conteneur principal */
+.container {
+  text-align: center;
+}
+
+/* Titre LOGIN */
+p {
+  font-size: 40px;
+  color: rgb(204, 204, 204);
+  margin-bottom: 20px;
+}
+
+/* Cadre principal */
+fieldset {
+  border: 2px solid rgb(204, 204, 204);
+  background-color: blue;
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+/* Champs de saisie */
+input[type="email"],
+input[type="password"],
+input[type="text"]{
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+}
+
+/* Bouton */
+button {
+  background-color: aliceblue;
+  color: blue;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgb(204, 204, 255);
+}
+
+/* Lien inscription */
+.nav2 {
+  margin-top: 20px;
+  font-size: 17px;
+  color: white;
+}
+.nav2 a {
+  color: rgb(66, 66, 247);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav2 a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.ab{
+  font-size: 20px;
+  color: rgb(232, 101, 101);
+  margin-bottom: 10px;
+}
