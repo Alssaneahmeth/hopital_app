@@ -10,16 +10,17 @@ try {
 $error_message = "";
 
 if (isset($_POST['se_connecter'])) {
-    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+    if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['poste'])) {
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $password = $_POST['password'];
+        $poste = htmlspecialchars($_POST['poste']);
       
         // Vérifier la validité de l'email
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $error_message = "Adresse email invalide.";
         } else {
-            $recupUser = $bdd->prepare('SELECT * FROM personnelle WHERE email = ?');
-            $recupUser->execute(array($email));
+            $recupUser = $bdd->prepare('SELECT * FROM personnelle WHERE email = ? AND poste = ?');
+            $recupUser->execute(array($email, $poste));
             
             if ($recupUser->rowCount() > 0) {
                 $user = $recupUser->fetch();
@@ -34,16 +35,17 @@ if (isset($_POST['se_connecter'])) {
                         $_SESSION['email'] = $user['email'];
                         $_SESSION['nom'] = $user['Nom'];
                         $_SESSION['prenom'] = $user['prenom'];
+                        $_SESSION['poste'] = $user['poste'];
                         
-                        // Redirection vers l'espace patient
-                        header('Location: page3.php');
+                        // Redirection vers l'espace personnel (à créer)
+                        header('Location: espace_personnel.php');
                         exit;
                     } else {
                         $error_message = "Mot de passe incorrect.";
                     }
                 }
             } else {
-                $error_message = "Aucun compte trouvé avec cet email.";
+                $error_message = "Aucun compte trouvé avec ces identifiants.";
             }
         }
     } else {
@@ -51,6 +53,7 @@ if (isset($_POST['se_connecter'])) {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

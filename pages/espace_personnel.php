@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page-A_PROPOS</title>
-    <link rel="stylesheet" href="page2.css">
+    <title>Espace_personnel</title>
 </head>
 <body>
-    Notre application vous propose une
+    zertfyu
 </body>
 </html>

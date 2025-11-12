@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['id_patient'])) {
+    header('Location: login.php');
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +25,7 @@ session_start();
         BIENVENUE DANS VOTRE ESPACE PERSONNEL
     </P>
     <div class="nav1">
-        <a href="page4.php"><img src="../images/im5.jpg" alt="image rendez-vous"> </a>
+        <a href="rendez-vous.php"><img src="../images/im5.jpg" alt="image rendez-vous"> </a>
     </div>
     <div class="nav2">
         <a href="page5.php"> <img src="../images/consultation.jpg" alt="image de consultation"></a>
@@ -34,6 +40,6 @@ session_start();
 
         @ HOPITAL "SANTE SENGAL"
     </div>
-</body>tyu
+</body>
 
 </html>
