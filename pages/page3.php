@@ -28,7 +28,7 @@ if (!isset($_SESSION['id_patient'])) {
         <a href="rendez-vous.php"><img src="../images/im5.jpg" alt="image rendez-vous"> </a>
     </div>
     <div class="nav2">
-        <a href="page5.php"> <img src="../images/consultation.jpg" alt="image de consultation"></a>
+        <a href="consultation.php"> <img src="../images/consultation.jpg" alt="image de consultation"></a>
     </div><br><br><br><br><br><br><br><br><br>
     <div class="nav3">
         <a href="page6.php"><img src="../images/facture.jpg" alt="image de facture"></a>
