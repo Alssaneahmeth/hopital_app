@@ -13,7 +13,7 @@
 
   <section class="rdv">
   <h2>Prendre un rendez-vous</h2>
-  <form id="rdvForm" novalidate>
+  <form id="rdvForm" action="ajouter_rendezvous.php" method="POST" novalidate>
     <div class="grid">
       <div class="field">
         <label for="patientName">Nom du patient</label>
