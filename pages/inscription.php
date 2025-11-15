@@ -98,7 +98,7 @@ if (isset($_POST['soumettre'])) {
     }
 }
 ?>
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
