@@ -1,0 +1,52 @@
+img{
+height: 100px;
+width: 110px;;
+}
+.nav{
+background-color: blue;
+border: 50px;
+font-size: 100px;
+text-align: center;
+}
+.nav2 img{
+height: 350px;
+width: 1250px;
+}
+.nav2 p{
+text-align: center;
+}
+a{
+color: rgb(204, 204, 204);
+font-size:27px;
+}
+body{
+background-color: rgb(137, 137, 236);
+}
+p{
+    size: 55px;
+    text-align: center;
+    color:  rgb(255, 253, 253);;
+}
+.nav3{
+text-align: center;
+background-color: rgb(33, 33, 218);
+font-size: 50px;
+color:  rgb(255, 253, 253);;
+}
+P{
+font-size: 40PX;
+
+}
+.nav0{
+color: rgb(204, 204, 204);
+font-size:17px;
+text-align: center;
+}/* Pied de page */
+footer {
+    background-color: #0047ab;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 16px;
+}
