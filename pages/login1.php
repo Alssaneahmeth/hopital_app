@@ -57,36 +57,26 @@ if (isset($_POST['se_connecter'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PERSONNELLE</title>
-    <link rel="stylesheet" href="personnelle.css">
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="login1.css">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
   <div class="container">
     <fieldset>
       <p>LOGIN</p>
       <form name="login" action="" method="post">
-        <input type="email" name="email" placeholder="Email" ><br>
-        <input type="password" name="password" placeholder="Password" ><br>
-        <input type="text" name="poste" placeholder="poste" ><br><br>
-        <button type="submit" name="se_connecter"> Se connecter</button>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="texte" name="poste" placeholder="Poste" required><br>
+        <button type="submit" name="se_connecter">Se connecter</button>
       </form>
     </fieldset>
     <div class="nav2">
-      <a href="inscription1.php"><em>S’inscrire ?</em></a>
+      <p>Je suis nouveau ?</p>
+      <a href="inscription.php"><em>Demandr un compte</em></a>
     </div>
   </div>
-</body>
-</html>
 </body>
 </html>
