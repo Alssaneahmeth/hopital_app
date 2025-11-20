@@ -69,13 +69,13 @@ if (isset($_POST['se_connecter'])) {
       <form name="login" action="" method="post">
         <input type="email" name="email" placeholder="Email" required><br>
         <input type="password" name="password" placeholder="Password" required><br>
-        <input type="texte" name="poste" placeholder="Poste" required><br>
+        <input type="texte" name="poste" placeholder="Poste" required><br><br>
         <button type="submit" name="se_connecter">Se connecter</button>
       </form>
     </fieldset>
     <div class="nav2">
       <p>Je suis nouveau ?</p>
-      <a href="inscription.php"><em>Demandr un compte</em></a>
+      <a href="inscription.php"><em>Demander un compte</em></a>
     </div>
   </div>
 </body>
