@@ -17,7 +17,7 @@
     <h3> MES CONSULTATIONS </h3>
     
  <div class="nav3">
-                @ HOPITAL "SANTE SENEGAL"
+        
             </div> 
 </body>
 </html>
