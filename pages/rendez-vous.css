@@ -10,7 +10,11 @@
   --success: #16a34a;
 }
 
+<<<<<<< HEAD
+* { box-sizing: border-box; }
+=======
 { box-sizing: border-box; }
+>>>>>>> 696e402c875a4c6a29d16900b7cc1ac20e83fe73
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;

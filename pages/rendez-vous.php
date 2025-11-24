@@ -2,18 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prise de Rendez-vous</title>
-  <link rel="stylesheet" href="rendez-vous.css">
-</head>
-<body>
-  <header>
-    <h1>Page de Rendez-vous</h1>
-  </header>
-
   <section class="rdv">
   <h2>Prendre un rendez-vous</h2>
-  <form id="rdvForm" action="ajouter_rendezvous.php" method="POST" novalidate>
+  <form id="rdvForm" novalidate>
     <div class="grid">
       <div class="field">
         <label for="patientName">Nom du patient</label>
@@ -100,5 +92,3 @@
     </table>
   </div>
 </section>
-</body>
-</html>
