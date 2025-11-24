@@ -1,0 +1,63 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 30px;
+            background-color: #3775db;
+        }
+        .facture-container {
+            background: #fff;
+            max-width: 600px;
+            margin: auto;
+            padding: 36px 44px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+        }
+        h1 {
+            color: #3775db;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+        .info {
+            margin-bottom: 28px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+        }
+        table th, table td {
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            padding: 10px 7px;
+        }
+        table th {
+            background: #e9f2fa;
+        }
+        .total-section {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 12px;
+        }
+        .total-label, .total-amount {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .total-label {
+            margin-right: 18px;
+            color: #233b6a;
+        }
+        .total-amount {
+            color: #198754;
+            min-width: 110px;
+        }
+        .signature {
+            text-align: right;
+            margin-top: 38px;
+            color: #888;
+        }
