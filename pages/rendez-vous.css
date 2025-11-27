@@ -10,11 +10,7 @@
   --success: #16a34a;
 }
 
-<<<<<<< HEAD
 * { box-sizing: border-box; }
-=======
-{ box-sizing: border-box; }
->>>>>>> 696e402c875a4c6a29d16900b7cc1ac20e83fe73
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -24,16 +20,16 @@ body {
 }
 
 section { background: var(--card); margin: 1rem auto; padding: 1rem; max-width: 1000px; border: 1px solid var(--border); border-radius: 12px; }
-h2 { margin-top: 0; }
+h2 { margin-top: 0; text-align: center; } /* titres centrés */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 2rem; /* espace plus grand entre Nom et Email */
 }
 .field-rows { grid-column: span 2; }
 
-.field label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+.field label { display: block; font-weight: 600; margin-bottom: 0.5rem; text-align: center; } /* labels centrés */
 .field input, .field select, .field textarea {
   width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--border); border-radius: 8px; background: #fff;
 }
@@ -48,6 +44,8 @@ h2 { margin-top: 0; }
 .btn-primary { background: var(--primary); color: var(--primary-contrast); }
 .btn-secondary { background: #eef2ff; color: var(--primary); border-color: #c7d2fe; }
 
+.btn-center { text-align: center; margin-top: 1rem; } /* bouton centré */
+
 .toast {
   margin-top: 0.75rem; padding: 0.6rem 0.75rem; border-radius: 8px; display: none;
 }
@@ -55,10 +53,10 @@ h2 { margin-top: 0; }
 
 .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
 table { width: 100%; border-collapse: collapse; }
-thead th { text-align: left; background: #f3f4f6; padding: 0.6rem; }
-tbody td { border-top: 1px solid var(--border); padding: 0.6rem; }
+thead th { text-align: center; background: #f3f4f6; padding: 0.6rem; } /* en-têtes centrés */
+tbody td { border-top: 1px solid var(--border); padding: 0.6rem; text-align: center; } /* contenu centré */
 
-.filters { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+.filters { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap; justify-content: center; }
 .filters input, .filters select { min-width: 180px; }
 
 @media (max-width: 680px) {
