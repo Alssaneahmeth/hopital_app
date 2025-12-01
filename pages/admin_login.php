@@ -19,16 +19,13 @@ if (isset($_POST['admin_login'])) {
             // Vérifier dans la table admin
             $recupAdmin = $bdd->prepare('SELECT * FROM admin WHERE email = ?');
             $recupAdmin->execute(array($email));
-            
             if ($recupAdmin->rowCount() > 0) {
                 $admin = $recupAdmin->fetch();
-                
                if (password_verify($password, $admin['password'])){
                     $_SESSION['admin_id'] = $admin['id'];
                     $_SESSION['admin_email'] = $admin['email'];
                     $_SESSION['admin_nom'] = $admin['nom'];
                     $_SESSION['admin_role'] = $admin['role'];
-                    
                     header('Location: admin_dashboard.php');
                     exit;
                } else {
