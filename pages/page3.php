@@ -13,7 +13,7 @@ if (!isset($_SESSION['id_patient'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace Personnel - Menu</title>
-    <link rel="stylesheet" href="page3.css">
+ <link rel="stylesheet" href="page3.css">
 </head>
 <body>
     <div class="container">
@@ -29,8 +29,9 @@ if (!isset($_SESSION['id_patient'])) {
                     <div class="menu-icon">📅</div>
                     <div class="menu-content">
                         <h2 class="menu-title">MES RENDEZ-VOUS</h2>
-                        <a href="rendez-vous.php"><p class="menu-description">Consultez et gérez vos rendez-vous</p></a>
-                        
+                        <p class="menu-description">
+                            <a href="rendez-vous.php">Consultez et gérez vos rendez-vous</a>
+                        </p>
                     </div>
                     <div class="menu-arrow">→</div>
                 </li>
@@ -38,9 +39,10 @@ if (!isset($_SESSION['id_patient'])) {
                 <li class="menu-item">
                     <div class="menu-icon">💬</div>
                     <div class="menu-content">
-                         <h2 class="menu-title">MES CONSULTATIONS</h2>
-                       <a href="consultation.php"><p class="menu-description">Accédez à vos consultations passées</p></a>
-                        
+                        <h2 class="menu-title">MES CONSULTATIONS</h2>
+                        <p class="menu-description">
+                            <a href="consultation.php">Accédez à vos consultations passées</a>
+                        </p>
                     </div>
                     <div class="menu-arrow">→</div>
                 </li>
@@ -49,8 +51,9 @@ if (!isset($_SESSION['id_patient'])) {
                     <div class="menu-icon">🧾</div>
                     <div class="menu-content">
                         <h2 class="menu-title">FACTURES</h2>
-                        <a href="facture.php"><p class="menu-description">Téléchargez et consultez vos factures</p></a>
-                        
+                        <p class="menu-description">
+                            <a href="facture.php">Téléchargez et consultez vos factures</a>
+                        </p>
                     </div>
                     <div class="menu-arrow">→</div>
                 </li>
@@ -59,15 +62,18 @@ if (!isset($_SESSION['id_patient'])) {
                     <div class="menu-icon">ℹ️</div>
                     <div class="menu-content">
                         <h2 class="menu-title">MES INFORMATIONS</h2>
-                       <a href="information.php">  <p class="menu-description">Modifiez vos informations personnelles</p></a>
-                       
-</div>
+                        <p class="menu-description">
+                            <a href="information.php">Modifiez vos informations personnelles</a>
+                        </p>
+                    </div>
+                    <div class="menu-arrow">→</div>
                 </li>
             </ul>
         </nav>
 
         <!-- Section de contenu -->
         <main class="content">
+            <!-- Le contenu des pages liées s'affichera ici -->
         </main>
 
         <!-- Pied de page -->
@@ -77,30 +83,34 @@ if (!isset($_SESSION['id_patient'])) {
     </div>
 
     <script>
-        // Script pour la navigation dans le menu
-        /*document.addEventListener('DOMContentLoaded', function() {
+        // Script pour mettre en surbrillance l'élément du menu actif
+        document.addEventListener('DOMContentLoaded', function() {
             const menuItems = document.querySelectorAll('.menu-item');
-            const contentTitle = document.getElementById('content-title');
-            const contentSubtitle = document.getElementById('content-subtitle');
             
             menuItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Retirer la classe active de tous les éléments
-                    menuItems.forEach(i => i.classList.remove('active'));
+                const link = item.querySelector('a');
+                if (link) {
+                    // Ajouter un événement de clic sur le lien
+                    link.addEventListener('click', function(e) {
+                        // Retirer la classe active de tous les éléments
+                        menuItems.forEach(i => i.classList.remove('active'));
+                        
+                        // Ajouter la classe active à l'élément parent
+                        item.classList.add('active');
+                    });
                     
-                    // Ajouter la classe active à l'élément cliqué
-                    this.classList.add('active');
-                    
-                    // Récupérer le titre et la description de l'élément cliqué
-                    const title = this.querySelector('.menu-title').textContent;
-                    const description = this.querySelector('.menu-description').textContent;
-                    
-                    // Mettre à jour le contenu
-                    contentTitle.textContent = title;
-                    contentSubtitle.textContent = description;
-                });
+                    // Ajouter aussi l'événement de clic sur l'élément entier
+                    item.addEventListener('click', function(e) {
+                        if (!e.target.closest('a')) {
+                            const link = this.querySelector('a');
+                            if (link) {
+                                link.click();
+                            }
+                        }
+                    });
+                }
             });
-        });*/
+        });
     </script>
 </body>
 </html>
