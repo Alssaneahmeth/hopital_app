@@ -1,9 +1,10 @@
 :root {
-  --bg: #f7f9fc;
+  /* Palette hospitalière */
+  --bg: #f0fdf4;
   --card: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
-  --primary: #2563eb;
+  --primary: #0ea5e9;
   --primary-contrast: #ffffff;
   --border: #e5e7eb;
   --danger: #dc2626;
@@ -19,48 +20,119 @@ body {
   line-height: 1.5;
 }
 
-section { background: var(--card); margin: 1rem auto; padding: 1rem; max-width: 1000px; border: 1px solid var(--border); border-radius: 12px; }
-h2 { margin-top: 0; text-align: center; } /* titres centrés */
+section {
+  background: var(--card);
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 1000px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+h2 { margin-top: 0; text-align: center; }
 
+/* Formulaire */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem; /* espace plus grand entre Nom et Email */
+  gap: 2rem;
 }
 .field-rows { grid-column: span 2; }
 
-.field label { display: block; font-weight: 600; margin-bottom: 0.5rem; text-align: center; } /* labels centrés */
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 .field input, .field select, .field textarea {
-  width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--border); border-radius: 8px; background: #fff;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
 }
 .field input:focus, .field select:focus, .field textarea:focus {
-  outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(14,165,233,.25);
 }
 .error { color: var(--danger); font-size: 0.85rem; min-height: 1.2em; }
 
+/* Centrage et réduction des champs Motif et Heure */
+#reason, #time {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Boutons */
 .btn-primary, .btn-secondary {
-  padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid transparent; cursor: pointer; font-weight: 600;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
 }
-.btn-primary { background: var(--primary); color: var(--primary-contrast); }
-.btn-secondary { background: #eef2ff; color: var(--primary); border-color: #c7d2fe; }
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+.btn-secondary {
+  background: #e0f2fe;
+  color: var(--primary);
+  border-color: #bae6fd;
+}
+.btn-center { text-align: center; margin-top: 1rem; }
 
-.btn-center { text-align: center; margin-top: 1rem; } /* bouton centré */
-
+/* Toast */
 .toast {
-  margin-top: 0.75rem; padding: 0.6rem 0.75rem; border-radius: 8px; display: none;
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  display: none;
 }
-.toast.show { display: block; background: #ecfdf5; color: var(--success); border: 1px solid #a7f3d0; }
+.toast.show {
+  display: block;
+  background: #ecfdf5;
+  color: var(--success);
+  border: 1px solid #a7f3d0;
+}
 
-.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+/* Tableau */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
 table { width: 100%; border-collapse: collapse; }
-thead th { text-align: center; background: #f3f4f6; padding: 0.6rem; } /* en-têtes centrés */
-tbody td { border-top: 1px solid var(--border); padding: 0.6rem; text-align: center; } /* contenu centré */
+thead th {
+  text-align: center;
+  background: #f3f4f6;
+  padding: 0.6rem;
+}
+tbody td {
+  border-top: 1px solid var(--border);
+  padding: 0.6rem;
+  text-align: center;
+}
 
-.filters { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap; justify-content: center; }
-.filters input, .filters select { min-width: 180px; }
+/* Filtres */
+.filters {
+  display: flex;
+  gap: 1rem;               /* plus d’espace entre les filtres */
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filters input, .filters select, .filters button {
+  min-width: 180px;
+  padding: 0.6rem 0.8rem;
+}
 
+/* Responsive */
 @media (max-width: 680px) {
   .grid { grid-template-columns: 1fr; }
   .field-rows { grid-column: span 1; }
   .btn-primary, .btn-secondary { width: 100%; }
+  #reason, #time { width: 100%; }
 }
